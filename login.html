@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up and Log In</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='512' height='512' viewBox='0 0 512 512'><circle cx='256' cy='256' r='256' fill='%231e1e1e'/><text x='50%25' y='50%25' text-anchor='middle' fill='%234dafff' font-family='Arial, sans-serif' font-size='200' dy='.3em' font-weight='bold'>S'dS</text></svg>">
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <div class="form-container">
+    <!-- Sign Up Form -->
+    <div class="form-card" id="sign-up-form">
+      <h2>Sign Up</h2>
+      <form onsubmit="redirectToLogin(event)">
+        <input type="text" placeholder="Username" required>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit">Sign Up</button>
+        <p>Already have an account? <a href="#" onclick="showLoginForm()">Log In</a></p>
+      </form>
+    </div>
+
+    <!-- Log In Form -->
+    <div class="form-card hidden" id="log-in-form">
+      <h2>Log In</h2>
+      <form onsubmit="redirectToHome(event)">
+        <input type="text" placeholder="Username" required>
+        <input type="password" placeholder="Password" required>
+        <a href="#" class="forgot-password">Forgot password?</a>
+        <button type="submit">Log In</button>
+        <p>Don't have an account? <a href="#" onclick="showSignUpForm()">Sign Up</a></p>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function showLoginForm() {
+      document.getElementById('sign-up-form').classList.add('hidden');
+      document.getElementById('log-in-form').classList.remove('hidden');
+    }
+
+    function showSignUpForm() {
+      document.getElementById('log-in-form').classList.add('hidden');
+      document.getElementById('sign-up-form').classList.remove('hidden');
+    }
+
+    function redirectToLogin(event) { 
+  event.preventDefault();
+  showLoginForm();
+}
+
+function redirectToHome(event) {
+  event.preventDefault();
+  window.location.href = "index.html";
+}
+
+  </script>
+</body>
+</html>

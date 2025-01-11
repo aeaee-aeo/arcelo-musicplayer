@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sync’dSounds</title>
+    <link rel="stylesheet" href="playlist.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='512' height='512' viewBox='0 0 512 512'><circle cx='256' cy='256' r='256' fill='%231e1e1e'/><text x='50%25' y='50%25' text-anchor='middle' fill='%234dafff' font-family='Arial, sans-serif' font-size='200' dy='.3em' font-weight='bold'>S'dS</text></svg>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="brand">Menu</div>
+            <nav class="menu">
+              <ul>
+                <li>
+                    <a href="index.html">
+                      <i class="fas fa-home"></i> Home
+                    </a>
+                </li> 
+                <li>
+                    <a href="Artist.html">
+                      <i class="fas fa-music"></i>Artists
+                    </a>
+                </li> 
+                <li class="dropdown">  
+                  <i class="fas fa-list"></i> Playlist
+                  <ul class="dropdown-menu">
+                    <li><a href="P1.html">17 Is Right Here</a></li>
+                    <li><a href="P2.html">BE</a></li>
+                    <li><a href="P3.html">Best of Avril</a></li>
+                    <li><a href="P4.html">Top Hits</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+            <div class="footer">
+                Made by <a>Sync'dSounds</a>
+            </div>
+        </div>
+
+        <main class="main">
+            <header class="header">
+                <h1>Sync’dSounds</h1>
+                <div class="header-center">
+                    <h3>Stream.Listen.Enjoy</h3>
+                </div> 
+                <div class="login">
+                    <a href="login.html">
+                    <i class="fa-solid fa-user"></i>
+                    </a>
+                </div>
+            </header>
+
+            <section class="main-content">
+                <div class="player-and-playlist">
+                    <div class="player-section">
+                        <div class="album-info">
+                            <img id="player-track-image" src="pictures/GrowingUp.jpg" alt="Album Cover">
+                            <div>
+                                <h2 id="player-track-title">Best of Avril</h2>
+                                <h3 id="player-track-artist">Avril Lavigne</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="playlist-section">
+                        <div class="songs-and-album">
+                            <div class="songs">
+                                <h3>Songs</h3>
+                                <ul class="song-list">
+                                    <li class="song-item">
+                                        <div class="song-container" data-audio="Avril/Here's to Never Growing Up.mp3" data-title="Here's to Never Growing Up" data-artist="Avril Lavigne" data-image="pictures/GrowingUp.jpg">
+                                        Here's to Never Growing Up
+                                        </div>
+                                    </li>
+                                    <li class="song-item">
+                                        <div class="song-container" data-audio="Avril/spotifydown.com - Complicated.mp3" data-title="Complicated" data-artist="Avril Lavigne" data-image="pictures/LetGo.jpg">
+                                        Complicated
+                                        </div>
+                                    </li>
+                                    <li class="song-item">
+                                        <div class="song-container" data-audio="Avril/Wish You Were Here.mp3" data-title="Wish You Were Here" data-artist="Avril Lavigne" data-image="pictures/Wishyouwerehere.jpg">
+                                        Wish You Were Here
+                                        </div>
+                                    </li>
+                                    <li class="song-item">
+                                        <div class="song-container" data-audio="Avril/Girlfriend.mp3" data-title="Girlfriend" data-artist="Avril Lavigne" data-image="pictures/girlfriend.jpg">
+                                        Girlfriend
+                                        </div>
+                                    </li>
+                                    <li class="song-item">
+                                        <div class="song-container" data-audio="Avril/spotifydown.com - Sk8er Boi.mp3" data-title="Sk8ter Boi" data-artist="Avril Lavigne" data-image="pictures/LetGo.jpg" >
+                                        Sk8ter Boi
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="about-album">
+                            <h2>About "Avril Lavigne"</h2>
+                            <div class="album-infos">
+                            <img src="pictures/GrowingUp.jpg" alt="Artist Picture" class="album-picture">
+                            <p class="album-description">
+                                <b>Avril Lavigne's</b> iconic songs, from heartfelt ballads like "<i>Wish You Were Here</i>" 
+                                to rebellious anthems like "<i>Complicated</i>" and "<i>Sk8er Boi,</i>" showcase her emotional 
+                                depth and punk-rock energy. Playful hits like "Girlfriend" and nostalgic tracks 
+                                like "<i>Here's to Never Growing Up</i>" cement her as a pop-punk legend.
+                            </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>              
+        </main>
+
+        <footer class="media-controls">
+            <div class="footer-player">
+                <div id="footer-track-info">
+                    <img id="footer-track-image" src="pictures/GrowingUp.jpg" alt="Album Cover" />
+                    <div>
+                        <p id="footer-track-title">Here's to Never Growing Up</p>
+                        <p id="footer-track-artist">Avril Lavigne</p>
+                    </div>
+                </div>
+
+                <div class="footer-controls-center">
+                    <div class="footer-buttons">
+                        <i class="fa fa-backward" id="prev-button"></i>
+                        <i class="fa fa-play" id="play-button"></i>
+                        <i class="fa fa-forward" id="next-button"></i>
+                    </div>
+                    <div class="time-display">
+                        <span id="current-time">0:00</span>
+                        <input type="range" id="progress-slider" value="0" min="0" max="100">
+                        <span id="total-time">0:00</span>
+                    </div>
+                </div>
+
+                <div class="volume-control">
+                    <i class="fa-solid fa-volume-high"></i>
+                    <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="0.5">
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    const songItems = document.querySelectorAll(".song-container");
+    const playButton = document.querySelector("#play-button");
+    const prevButton = document.querySelector("#prev-button");
+    const nextButton = document.querySelector("#next-button");
+    const progressSlider = document.querySelector("#progress-slider");
+    const currentTimeDisplay = document.querySelector("#current-time");
+    const totalTimeDisplay = document.querySelector("#total-time");
+
+    const volumeSlider = document.querySelector("#volume-slider");
+    const volumeIcon = document.querySelector(".fa-solid.fa-volume-high");
+
+    volumeSlider.addEventListener("input", (e) => {
+        const volume = e.target.value;
+        if (currentAudio) {
+            currentAudio.volume = volume;
+        }
+    });
+    
+
+    const footerTrackTitle = document.querySelector("#footer-track-title");
+    const footerTrackArtist = document.querySelector("#footer-track-artist");
+    const footerTrackImage = document.querySelector("#footer-track-image");
+
+    const playerTrackTitle = document.querySelector("#player-track-title");
+    const playerTrackArtist = document.querySelector("#player-track-artist");
+    const playerTrackImage = document.querySelector("#player-track-image");
+
+    const pauseButtonClass = "fa-pause";
+    const playButtonClass = "fa-play";
+
+    let currentAudio = null;
+    let currentSongIndex = -1;
+    let isPlaying = false;
+    let updateInterval = null;
+
+    function playSong(index) {
+        if (currentAudio) {
+            currentAudio.pause();
+            currentAudio.currentTime = 0;
+            clearInterval(updateInterval);
+        }
+
+        currentSongIndex = index;
+        const selectedSong = songItems[currentSongIndex];
+
+        const audioSrc = selectedSong.getAttribute("data-audio");
+        const songTitle = selectedSong.getAttribute("data-title");
+        const songArtist = selectedSong.getAttribute("data-artist");
+        const songImage = selectedSong.getAttribute("data-image");
+
+        footerTrackTitle.textContent = songTitle || "Unknown Title";
+        footerTrackArtist.textContent = songArtist || "Unknown Artist";
+        footerTrackImage.src = songImage || "default-image.jpg"; 
+
+        playerTrackTitle.textContent = songTitle || "Unknown Title";
+        playerTrackArtist.textContent = songArtist || "Unknown Artist";
+        playerTrackImage.src = songImage || "default-image.jpg"; 
+
+        currentAudio = new Audio(audioSrc);
+
+        currentAudio.addEventListener("loadedmetadata", () => {
+            const totalSeconds = Math.floor(currentAudio.duration);
+            totalTimeDisplay.textContent = formatTime(totalSeconds);
+            progressSlider.max = totalSeconds;
+        });
+
+        currentAudio.play();
+        isPlaying = true;
+        updatePlayButton(true);
+
+        updateInterval = setInterval(updateProgress, 1000);
+        currentAudio.addEventListener("ended", playNextSong);
+    }
+
+    function playNextSong() {
+        const nextIndex = (currentSongIndex + 1) % songItems.length;
+        playSong(nextIndex);
+    }
+
+    function updatePlayButton(isPlaying) {
+        if (isPlaying) {
+            playButton.classList.remove(playButtonClass);
+            playButton.classList.add(pauseButtonClass);
+        } else {
+            playButton.classList.remove(pauseButtonClass);
+            playButton.classList.add(playButtonClass);
+        }
+    }
+
+    function updateProgress() {
+        if (currentAudio) {
+            progressSlider.value = Math.floor(currentAudio.currentTime);
+            currentTimeDisplay.textContent = formatTime(Math.floor(currentAudio.currentTime));
+        }
+    }
+
+    function formatTime(seconds) {
+        const minutes = Math.floor(seconds / 60);
+        const remainingSeconds = seconds % 60;
+        return `${minutes}:${remainingSeconds.toString().padStart(2, "0")}`;
+    }
+
+    playButton.addEventListener("click", () => {
+        if (!currentAudio) return;
+
+        if (isPlaying) {
+            currentAudio.pause();
+            isPlaying = false;
+        } else {
+            currentAudio.play();
+            isPlaying = true;
+        }
+        updatePlayButton(isPlaying);
+    });
+
+    prevButton.addEventListener("click", () => {
+        if (songItems.length === 0) return;
+
+        const prevIndex = (currentSongIndex - 1 + songItems.length) % songItems.length;
+        playSong(prevIndex);
+    });
+
+    nextButton.addEventListener("click", () => {
+        if (songItems.length === 0) return;
+
+        const nextIndex = (currentSongIndex + 1) % songItems.length;
+        playSong(nextIndex);
+    });
+
+    progressSlider.addEventListener("input", (e) => {
+        if (currentAudio) {
+            currentAudio.currentTime = e.target.value;
+            currentTimeDisplay.textContent = formatTime(Math.floor(currentAudio.currentTime));
+        }
+    });
+
+    songItems.forEach((item, index) => {
+        item.addEventListener("click", () => {
+            playSong(index);
+        });
+    });
+});
+    </script>
+
