@@ -241,6 +241,10 @@ body {
     margin-bottom: 10px;
 }
 
+.song-item-hidden {
+    display: none;
+}
+
 .song-container {
     background-color: #2e3640;
     padding: 10px;
